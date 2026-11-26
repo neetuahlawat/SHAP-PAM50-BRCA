@@ -1,0 +1,11 @@
+# Raw data are public and are not stored in this repository
+HiSeqV2
+HiSeqV2.gz
+*clinicalMatrix*
+brca_metabric/
+brca_metabric*.tar.gz
+# Outputs written by the notebooks
+metabric_validation/
+revision_results/
+.ipynb_checkpoints/
+__pycache__/
