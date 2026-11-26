@@ -11,20 +11,15 @@ Corresponding author: Vishal Verma (vishal.verma@crsu.ac.in)
 ## Overview
 SHAP (TreeSHAP) values from a gradient-boosted ensemble are used to select a 300-gene panel for four-class PAM50 subtyping (Basal-like, HER2-enriched, Luminal A, Luminal B) of 514 TCGA-BRCA tumours. The panel and four classifiers (XGBoost, Random Forest, SVM, logistic regression) are evaluated with repeated nested cross-validation and then locked and validated externally on 1,608 METABRIC tumours.
 
-## Repository structure
-```
-SHAP-PAM50-BRCA/
-├── notebooks/
-│   ├── 00_TCGA_BRCA_pipeline.ipynb              # Sections 3.1–3.6, 4.1–4.6; Tables 3–11; Figs. 1–8
-│   ├── 01_METABRIC_external_validation.ipynb     # Sections 3.7, 4.7; Tables 12–13; Figs. 9–10
-│   ├── 02_additional_METABRIC_analyses.ipynb     # comparator panels, original panel, rank normalisation, class weights
-│   └── 03_survival_enrichment_sensitivity.ipynb  # survival, pathway enrichment, panel-size sweep, tuning (Sections 4.8–4.9; Figs. 11–12)
-├── results/                                      # figures reported in the article
-├── requirements.txt
-├── CITATION.cff
-├── LICENSE
-└── README.md
-```
+## Repository contents
+| File | Purpose | Paper |
+|---|---|---|
+| `00_TCGA_BRCA_pipeline.ipynb` | Held-out test, repeated nested CV, PAM50 exclusion, stability, SHAP interpretation | Sections 3.1–3.6, 4.1–4.6; Tables 3–11; Figs. 2–8 |
+| `01_METABRIC_external_validation.ipynb` | Locked-panel external validation on 1,608 METABRIC tumours | Sections 3.7, 4.7; Tables 12–13; Figs. 9–10 |
+| `02_additional_METABRIC_analyses.ipynb` | Comparator panels, original training panel, rank normalisation, class weighting | Sections 4.7–4.8 |
+| `03_survival_enrichment_sensitivity.ipynb` | Survival, pathway enrichment, panel-size sweep, hyperparameter tuning | Sections 4.8–4.9; Figs. 11–12 |
+| `Fig9_…png` – `Fig12_…png` | Figures 9–12 as reported in the article | |
+| `requirements.txt`, `CITATION.cff`, `LICENSE` | Packages, citation information, MIT licence | |
 
 ## Data
 All data are public and are **not** included in this repository.
